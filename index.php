@@ -1,206 +1,206 @@
 <?php require 'header.php' ?>
 <?php
-$city = $_GET['city'];// || $_SESSION['city'] || 'Knoxville';
-$state = $_GET['state'];//|| $_SESSION['state'] || 'Tennessee';
+$city = $_GET['city']; // || $_SESSION['city'] || 'Knoxville';
+$state = $_GET['state']; //|| $_SESSION['state'] || 'Tennessee';
 $keyword = str_replace('-', ' ', $_GET['keyword']);
 ?>
 
-    <section id="banner" class="marginCancel">
-        <article class="full">
-            <div class="row">
-                <div class="one-half padding5em mobile-full-width flexCenter">
-                    <div class="flexContent">
-                        <div class="content">
-                            <h1>If you or a loved one has been injured in an accident, you may be entitled to compensation!   </h1>
-                            <div class="wrapper90">
-                                <div class="box-action">
+<section id="banner" class="marginCancel">
+    <article class="full">
+        <div class="row">
+            <div class="one-half padding5em mobile-full-width flexTop">
+                <div class="flexContent">
+                    <div class="content">
+                        <h1>If you or a loved one has been injured in an accident, you may be entitled to compensation! </h1>
+                        <div class="wrapper90">
+                            <div class="box-action">
 
-                                    <div class="row clear">
-                                        <div class="first">
-                                            <ul>
-                                                <li>If you have been injured in an accident, we can help!</li>
-                                                <li>There is NO Obligation - simply speak to one of our attorneys to find out what we can do for you</li>
-                                                <li>No Fee Ever. Unless We Win.</li>
-                                            </ul>
-                                        </div>
+                                <div class="row clear">
+                                    <div class="first">
+                                        <ul>
+                                            <li>If you have been injured in an accident, we can help!</li>
+                                            <li>There is NO Obligation - simply speak to one of our attorneys to find out what we can do for you</li>
+                                            <li>No Fee Ever. Unless We Win.</li>
+                                        </ul>
                                     </div>
-                                    <a href="tel:8553467575" class="button big color-red fly">CALL NOW: (855) 346-7575</a>
                                 </div>
-                                <p class="text-center"><strong>97% Success Rate</strong></p>
+                                <a href="tel:8553467575" class="button big color-red fly">CALL NOW: (855) 346-7575</a>
                             </div>
+                            <p class="text-center"><strong>97% Success Rate</strong></p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="one-half padding4emV mobile-full-width marginLeft mobile-marginLeft-cancel content-center height-map-relative" id="formArea">
-                    <div class="one-sixth mobileHide"></div>
-                    <div class="two-thirds box-default mobile-full-width">
-                        <div class="form-contact">
-                            <form action="phpmail.php" method="post">
-                                <div class="form" id="step1">
-                                    <div class="form_heading">
-                                        <h4>See if you qualify. <br>Only takes 30 seconds!</h4>
-                                    </div>
-                                    <div class="fields">
-                                        <div class="input-wrap">
-                                            <p>Have you or a loved one been hospitalized or seen a doctor due to an injury?</p>
-                                            <select name="hospitalized" id="hospitalized" class="select_field">
-                                                <option value="">Select Yes or No</option>
-                                                <option value="yes">Yes</option>
-                                                <option value="no">No</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-wrap">
-                                            <p>Is an attorney representing you for this case already?</p>
-                                            <select name="representing" id="representing" class="select_field">
-                                                <option value="">Select Yes or No</option>
-                                                <option value="no">No</option>
-                                                <option value="yes">Yes</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-wrap">
-                                            <input type="button" name="next" value="Next" id="btn_form" class="btn_form">
-                                        </div>
-                                    </div>
-
+            <div class="one-half padding4emV mobile-full-width marginLeft mobile-marginLeft-cancel content-center height-map-relative" id="formArea">
+                <div class="one-sixth mobileHide"></div>
+                <div class="two-thirds box-default mobile-full-width">
+                    <div class="form-contact">
+                        <form action="phpmail.php" method="post">
+                            <div class="form" id="step1">
+                                <div class="form_heading">
+                                    <h4>See if you qualify. <br>Only takes 30 seconds!</h4>
                                 </div>
-
-                                <div class="form" id="step2">
-                                    <div class="form_heading">
-                                        <h4>What caused your injury?</h4>
+                                <div class="fields">
+                                    <div class="input-wrap">
+                                        <p>Have you or a loved one been hospitalized or seen a doctor due to an injury?</p>
+                                        <select name="hospitalized" id="hospitalized" class="select_field">
+                                            <option value="">Select Yes or No</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
                                     </div>
-                                    <div class="fields">
-                                        <div id="accident-type-checkboxes">
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="car" name="car" value="Car Accident" class="checkbox"><label for="car">Car Accident</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="motorcycle" name="motorcycle" value="Motorcycle Accident" class="checkbox"><label for="motorcycle">Motorcycle Accident</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="truck" name="truck" value="Truck Accident" class="checkbox"><label for="truck">Truck Accident</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="medical" name="medical" value="Medical Malpractice" class="checkbox"><label for="medical">Medical Malpractice</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="work" name="work" value="Work Related Injury" class="checkbox"><label for="work">Work Related Injury</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="slip" name="slip" value="Slip and Fall" class="checkbox"><label for="slip">Slip and Fall</label>
-                                            </div>
-                                            <div class="input-wrap">
-                                                <input type="checkbox" id="prod_lia" name="prod_lia" value="Product Liability/Defect" class="checkbox"><label for="prod_lia">Product Liability/Defect</label>
-                                            </div>
-                                        </div>
-                                        <div class="input-wrap">
-                                            <select name="year" id="year" class="select_field">
-                                                <option value="">Year of Injury:</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2014">2014</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-wrap">
-                                            <input type="button" name="next" value="Next" id="btn_form2" class="btn_form">
-                                        </div>
+                                    <div class="input-wrap">
+                                        <p>Is an attorney representing you for this case already?</p>
+                                        <select name="representing" id="representing" class="select_field">
+                                            <option value="">Select Yes or No</option>
+                                            <option value="no">No</option>
+                                            <option value="yes">Yes</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="button" name="next" value="Next" id="btn_form" class="btn_form">
                                     </div>
                                 </div>
 
-                                <div class="form" id="step3">
-                                    <div class="form_heading">
-                                        <h4>About you</h4>
-                                    </div>
-                                    <div class="fields">
-                                        <div class="input-wrap">
-                                            <p>Tell us about your accident for a free, confidential review by an experienced attorney.</p>
-                                        </div>
+                            </div>
 
+                            <div class="form" id="step2">
+                                <div class="form_heading">
+                                    <h4>What caused your injury?</h4>
+                                </div>
+                                <div class="fields">
+                                    <div id="accident-type-checkboxes">
                                         <div class="input-wrap">
-                                            <div class="half_field halfSizeFieldLeft"><input type="text" placeholder="First Name" name="fname" id="fname" class="input_field"></div>
-                                            <div class="half_field2 halfSizeFieldRight"><input type="text" placeholder="Last Name" name="lname" id="lname" class="input_field"></div>
+                                            <input type="checkbox" id="car" name="car" value="Car Accident" class="checkbox"><label for="car">Car Accident</label>
                                         </div>
                                         <div class="input-wrap">
-                                            <div class="half_field">
-                                                <select name="state" id="state" class="select_field2">
-                                                    <option value="">State</option>
-                                                    <option value="AL">Alabama</option>
-                                                    <option value="AK">Alaska</option>
-                                                    <option value="AZ">Arizona</option>
-                                                    <option value="AR">Arkansas</option>
-                                                    <option value="CA">California</option>
-                                                    <option value="CO">Colorado</option>
-                                                    <option value="CT">Connecticut</option>
-                                                    <option value="DE">Delaware</option>
-                                                    <option value="DC">District Of Columbia</option>
-                                                    <option value="FL">Florida</option>
-                                                    <option value="GA">Georgia</option>
-                                                    <option value="HI">Hawaii</option>
-                                                    <option value="ID">Idaho</option>
-                                                    <option value="IL">Illinois</option>
-                                                    <option value="IN">Indiana</option>
-                                                    <option value="IA">Iowa</option>
-                                                    <option value="KS">Kansas</option>
-                                                    <option value="KY">Kentucky</option>
-                                                    <option value="LA">Louisiana</option>
-                                                    <option value="ME">Maine</option>
-                                                    <option value="MD">Maryland</option>
-                                                    <option value="MA">Massachusetts</option>
-                                                    <option value="MI">Michigan</option>
-                                                    <option value="MN">Minnesota</option>
-                                                    <option value="MS">Mississippi</option>
-                                                    <option value="MO">Missouri</option>
-                                                    <option value="MT">Montana</option>
-                                                    <option value="NE">Nebraska</option>
-                                                    <option value="NV">Nevada</option>
-                                                    <option value="NH">New Hampshire</option>
-                                                    <option value="NJ">New Jersey</option>
-                                                    <option value="NM">New Mexico</option>
-                                                    <option value="NY">New York</option>
-                                                    <option value="NC">North Carolina</option>
-                                                    <option value="ND">North Dakota</option>
-                                                    <option value="OH">Ohio</option>
-                                                    <option value="OK">Oklahoma</option>
-                                                    <option value="OR">Oregon</option>
-                                                    <option value="PA">Pennsylvania</option>
-                                                    <option value="RI">Rhode Island</option>
-                                                    <option value="SC">South Carolina</option>
-                                                    <option value="SD">South Dakota</option>
-                                                    <option value="TN">Tennessee</option>
-                                                    <option value="TX">Texas</option>
-                                                    <option value="UT">Utah</option>
-                                                    <option value="VT">Vermont</option>
-                                                    <option value="VA">Virginia</option>
-                                                    <option value="WA">Washington</option>
-                                                    <option value="WV">West Virginia</option>
-                                                    <option value="WI">Wisconsin</option>
-                                                    <option value="WY">Wyoming</option>
-                                                </select>
-                                            </div>
-                                            <div class="half_field2 halfSizeFieldLeft"><input type="text" placeholder="Zip Code" name="zipcode" id="zipcode" class="input_field"></div>
-                                            <div class="half_field2 halfSizeFieldRight"><input type="text" placeholder="Phone Number" name="phone" id="phone" class="input_field"></div>
+                                            <input type="checkbox" id="motorcycle" name="motorcycle" value="Motorcycle Accident" class="checkbox"><label for="motorcycle">Motorcycle Accident</label>
                                         </div>
                                         <div class="input-wrap">
-                                            <div class="half_field"><input type="text" placeholder="Email" name="email" id="email" class="input_field"></div>
-
-                                            <div class="clearfix"></div>
+                                            <input type="checkbox" id="truck" name="truck" value="Truck Accident" class="checkbox"><label for="truck">Truck Accident</label>
                                         </div>
                                         <div class="input-wrap">
-                                            <p>Briefly describe any other details (important):</p>
-                                            <input type="text" placeholder="Description..." name="description" id="description" class="input_field2">
+                                            <input type="checkbox" id="medical" name="medical" value="Medical Malpractice" class="checkbox"><label for="medical">Medical Malpractice</label>
                                         </div>
                                         <div class="input-wrap">
-                                            <p class="smallPrint">By submitting your request, you grant permission for up to three of our premier partners to contact you using the phone number or email address that you have provided so we may assist you with your request for a free case evaluation. You agree that the matched partner may use an automatic telephone dialing system even if the number you provided is a wireless phone number. You understand that consent to being contacted is not a condition of purchase or acceptance of services of any kind.</p>
-
-                                            <input type="button" name="next" value="Submit" id="btn_form3" class="btn_form">
+                                            <input type="checkbox" id="work" name="work" value="Work Related Injury" class="checkbox"><label for="work">Work Related Injury</label>
+                                        </div>
+                                        <div class="input-wrap">
+                                            <input type="checkbox" id="slip" name="slip" value="Slip and Fall" class="checkbox"><label for="slip">Slip and Fall</label>
+                                        </div>
+                                        <div class="input-wrap">
+                                            <input type="checkbox" id="prod_lia" name="prod_lia" value="Product Liability/Defect" class="checkbox"><label for="prod_lia">Product Liability/Defect</label>
                                         </div>
                                     </div>
+                                    <div class="input-wrap">
+                                        <select name="year" id="year" class="select_field">
+                                            <option value="">Year of Injury:</option>
+                                            <option value="2017">2017</option>
+                                            <option value="2016">2016</option>
+                                            <option value="2015">2015</option>
+                                            <option value="2014">2014</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="button" name="next" value="Next" id="btn_form2" class="btn_form">
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="form" id="step3">
+                                <div class="form_heading">
+                                    <h4>About you</h4>
+                                </div>
+                                <div class="fields">
+                                    <div class="input-wrap">
+                                        <p>Tell us about your accident for a free, confidential review by an experienced attorney.</p>
+                                    </div>
+
+                                    <div class="input-wrap">
+                                        <div class="half_field halfSizeFieldLeft"><input type="text" placeholder="First Name" name="fname" id="fname" class="input_field"></div>
+                                        <div class="half_field2 halfSizeFieldRight"><input type="text" placeholder="Last Name" name="lname" id="lname" class="input_field"></div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="half_field">
+                                            <select name="state" id="state" class="select_field2">
+                                                <option value="">State</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AK">Alaska</option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="CA">California</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="DC">District Of Columbia</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="HI">Hawaii</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WA">Washington</option>
+                                                <option value="WV">West Virginia</option>
+                                                <option value="WI">Wisconsin</option>
+                                                <option value="WY">Wyoming</option>
+                                            </select>
+                                        </div>
+                                        <div class="half_field2 halfSizeFieldLeft"><input type="text" placeholder="Zip Code" name="zipcode" id="zipcode" class="input_field"></div>
+                                        <div class="half_field2 halfSizeFieldRight"><input type="text" placeholder="Phone Number" name="phone" id="phone" class="input_field"></div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <div class="half_field"><input type="text" placeholder="Email" name="email" id="email" class="input_field"></div>
+
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <p>Briefly describe any other details (important):</p>
+                                        <input type="text" placeholder="Description..." name="description" id="description" class="input_field2">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <p class="smallPrint">By submitting your request, you grant permission for up to three of our premier partners to contact you using the phone number or email address that you have provided so we may assist you with your request for a free case evaluation. You agree that the matched partner may use an automatic telephone dialing system even if the number you provided is a wireless phone number. You understand that consent to being contacted is not a condition of purchase or acceptance of services of any kind.</p>
+
+                                        <input type="button" name="next" value="Submit" id="btn_form3" class="btn_form">
+                                    </div>
                                 </div>
 
+                            </div>
 
-                                <!-- <div class="row min-space-bottom">
+
+                            <!-- <div class="row min-space-bottom">
                                    <h6 class="yellowText">See if you qualify. Only takes 30 seconds!</h6>
                                 </div>
                                 <div class="row">
@@ -221,14 +221,14 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
                                     </div>
                                 </div>
                                 <div class="clear"></div> -->
-                            </form>
+                        </form>
 
 
-                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- <div class="one-half padding2em mobile-full-width flexBottom">
+            <!-- <div class="one-half padding2em mobile-full-width flexBottom">
                     <div class="flexContent">
                         <div class="caption float-right">
                             <strong>WARNING:</strong> If you or a loved one have been injured in an accident… STOP! Saying the wrong thing to the opposing party or the insurance company can absolutely DESTROY your case and reduce or even eliminate your settlement
@@ -236,12 +236,12 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
                         </div>
                     </div>
                 </div> -->
-            </div>
-        </article>
-    </section>
+        </div>
+    </article>
+</section>
 
 <!---->
-<!--    <!-- Start features -->-->
+<!--    <!-- Start features -->
 <!--    <div class="heading space-bottom alignCenter">-->
 <!--        <div class="wrapper">-->
 <!--            <h3>What to expect when dealing with <br> insurance companies on your own:-->
@@ -275,9 +275,9 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
 <!--            </div>-->
 <!--        </article>-->
 <!--    </section>-->
-<!--    <!-- End features -->-->
+<!--    End features -->
 <!---->
-<!--    <!-- Start features -->-->
+<!--   Start features -->
 <!--    <div class="heading space-bottom alignCenter">-->
 <!--        <div class="wrapper">-->
 <!--            <h3>What we can do for you:-->
@@ -312,10 +312,10 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
 <!--            </div>-->
 <!--        </article>-->
 <!--    </section>-->
-    <!-- End features -->
+<!-- End features -->
 
-    <!-- Start sponsor -->
-    <!--
+<!-- Start sponsor -->
+<!--
                 <section class="section-3">
                     <article class="full">
                         <div class="sponsor normal-padding">
@@ -348,76 +348,76 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
                     </article>
                 </section>
                 -->
-    <!-- End sponsor -->
-    <!-- Start testimonial -->
-    <section class="section-5 space-bottom">
-        <article class="full">
-            <div class="testimonial">
-                <div class="row testimonial-wrap">
-                    <div class="one-third mobile-full-width">
-                        <div class="flexContent padding3em">
-                            <h4>Personal Injury Settlement</h4>
-                            <p>Personal injury cases are legal disputes that arise when a person, who’s not at fault, suffers harm from an accident or injury. A personal injury case can be resolved through an informal settlement, filing before any lawsuit, or civil court, where there is a court judgement to legally find others at fault.</p>
-                            <p>Any potential personal injury case requires a detailed understanding of the facts, the processes, and the law. If an accident has impacted your life, you want to seek legal council to see if you should pursue a lawsuit.</p>
-                        </div>
+<!-- End sponsor -->
+<!-- Start testimonial -->
+<section class="section-5 space-bottom">
+    <article class="full">
+        <div class="testimonial">
+            <div class="row testimonial-wrap">
+                <div class="one-third mobile-full-width">
+                    <div class="flexContent padding3em">
+                        <h4>Personal Injury Settlement</h4>
+                        <p>Personal injury cases are legal disputes that arise when a person, who’s not at fault, suffers harm from an accident or injury. A personal injury case can be resolved through an informal settlement, filing before any lawsuit, or civil court, where there is a court judgement to legally find others at fault.</p>
+                        <p>Any potential personal injury case requires a detailed understanding of the facts, the processes, and the law. If an accident has impacted your life, you want to seek legal council to see if you should pursue a lawsuit.</p>
                     </div>
-                    <div class="one-third mobile-full-width">
-                        <div class="testimonial-item">
-                            <div class="text-center">
-                                <img src="./assets/img/testimonial-1.png">
-                            </div>
-                            <p>The insurance company offered me $10,000 to settle my case, I didn't feel that was enough. My lawyer was able to get me $1.5 millon for my accident</p>
-                            <h6>Joseph M.</h6>
+                </div>
+                <div class="one-third mobile-full-width">
+                    <div class="testimonial-item">
+                        <div class="text-center">
+                            <img src="./assets/img/testimonial-1.png">
                         </div>
+                        <p>The insurance company offered me $10,000 to settle my case, I didn't feel that was enough. My lawyer was able to get me $1.5 millon for my accident</p>
+                        <h6>Joseph M.</h6>
                     </div>
-                    <div class="one-third mobile-full-width">
-                        <div class="testimonial-item">
-                            <div class="text-center">
-                                <img src="./assets/img/testimonial-2.png">
-                            </div>
-                            <p>Me and my family want to thank you for all of the work you did on our case. I appreciate the way you took the time to explain the process to me and to espond to all of my questions. There was not a day that I could not get a hold of you. We are very pleased with the result. I plan on recommending your firm to everyone!</p>
-                            <h6>Mary S.</h6>
+                </div>
+                <div class="one-third mobile-full-width">
+                    <div class="testimonial-item">
+                        <div class="text-center">
+                            <img src="./assets/img/testimonial-2.png">
                         </div>
+                        <p>Me and my family want to thank you for all of the work you did on our case. I appreciate the way you took the time to explain the process to me and to espond to all of my questions. There was not a day that I could not get a hold of you. We are very pleased with the result. I plan on recommending your firm to everyone!</p>
+                        <h6>Mary S.</h6>
                     </div>
                 </div>
             </div>
-        </article>
-    </section>
-    <!-- End testimonial -->
+        </div>
+    </article>
+</section>
+<!-- End testimonial -->
 
 
-    <!-- Start Pre-footer -->
-    <section class="section-6">
-        <article class="full">
-            <div class="pre-fotter">
-                <div class="row content-center">
-                    <div class="whole border-left mobile-full-width">
-                        <div class="box-default">
+<!-- Start Pre-footer -->
+<section class="section-6">
+    <article class="full">
+        <div class="pre-fotter">
+            <div class="row content-center">
+                <div class="whole border-left mobile-full-width">
+                    <div class="box-default">
 
-                            <div class="row">
-                                <div class="one-third mobile-full-width padding3em">
-                                    <div class="flexContent">
-                                        <h3>Find out if you are eligible for a large settlement</h3>
-                                    </div>
+                        <div class="row">
+                            <div class="one-third mobile-full-width padding3em">
+                                <div class="flexContent">
+                                    <h3>Find out if you are eligible for a large settlement</h3>
                                 </div>
-                                <div class="one-third mobile-full-width padding3em mobileAddBorderTop">
-                                    <ul>
-                                        <li><span>1</span>97% Success Rate</li>
-                                        <li><span>2</span>Million Recovered</li>
-                                        <li><span>3</span>No Fee Unless We Win</li>
-                                    </ul>
-                                </div>
-                                <div class="one-third mobile-full-width padding3em alignCenter info mobileAddBorderTop">
-                                    <div class="flexContent">
-                                        <img src="./assets/img/telf.png">
-                                        <p><strong>DON'T LET THE INSURANCE <br>COMPANIES INTIMIDATE YOU</strong></p>
-                                        <h2><a href="tel:855346-7575">(855) 346-7575</a></h2>
-                                    </div>
+                            </div>
+                            <div class="one-third mobile-full-width padding3em mobileAddBorderTop">
+                                <ul>
+                                    <li><span>1</span>97% Success Rate</li>
+                                    <li><span>2</span>Million Recovered</li>
+                                    <li><span>3</span>No Fee Unless We Win</li>
+                                </ul>
+                            </div>
+                            <div class="one-third mobile-full-width padding3em alignCenter info mobileAddBorderTop">
+                                <div class="flexContent">
+                                    <img src="./assets/img/telf.png">
+                                    <p><strong>DON'T LET THE INSURANCE <br>COMPANIES INTIMIDATE YOU</strong></p>
+                                    <h2><a href="tel:855346-7575">(855) 346-7575</a></h2>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="one-third mobile-full-width mobile-full-width twitter paddingLeft3em mobilePaddingLeft3emCancel">
+                </div>
+                <!-- <div class="one-third mobile-full-width mobile-full-width twitter paddingLeft3em mobilePaddingLeft3emCancel">
                         <div class="row title-twitter content-center">
                             <div class="one-half">
                                 <h4>Lastet Tweets</h4>
@@ -443,12 +443,12 @@ $keyword = str_replace('-', ' ', $_GET['keyword']);
                             </div>
                         </div>
                     </div> -->
-                </div>
             </div>
-        </article>
-    </section>
-    <!-- End Pre-footer -->
-    </div>
+        </div>
+    </article>
+</section>
+<!-- End Pre-footer -->
+</div>
 <!--    <section class="section-5 space-bottom">-->
 <!--        <article class="full">-->
 <!--            <div class="infoBox white text-center">-->

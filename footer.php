@@ -35,7 +35,7 @@
 <!--        </div>-->
 <!--    </article>-->
 <!--</section>-->
-<!--<!-- End Pre-footer -->-->
+<!--End Pre-footer -->
 <!--</div>-->
 <!-- End Content -->
 <!-- Footer -->
@@ -93,8 +93,7 @@
 </div>
 <!-- jQuery -->
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZMZ937"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZMZ937" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
