@@ -1,0 +1,145 @@
+// CLEARFIX
+
+.group() {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+
+// GRID
+
+// Default 12 column fluid grid with 2% gutters
+// These can be set to any value you'd like
+@grid-columns: 12;
+//@grid-gutter-width:2%;
+
+
+// Use border-box to set the padding of fluid columns to em/px values
+@grid-box-sizing: border-box;
+
+//
+// Use .column(widthInColumns); and .push(widthInColumns); to make columns.
+//
+// Add .group on their containing row elements.
+//
+// Use .single-row if you want a block element to line up with the grid,
+// but contain no columns.
+//
+
+
+.column(@x:1, @grid-gutter-width:2%) {
+    // display: inline;
+    // float: left;
+    width: (@x*(100%/@grid-columns)-@grid-gutter-width);
+    margin: 0 (@grid-gutter-width/2%);
+    -webkit-box-sizing: @grid-box-sizing;
+    -moz-box-sizing: @grid-box-sizing;
+    box-sizing: @grid-box-sizing;
+}
+
+
+.single-row() {
+    .group();
+    width: auto;
+    margin: 0 (@grid-gutter-width/2%);
+}
+
+.push(@x:1) {
+    margin-left: (@x*(100%/@grid-columns)+@grid-gutter-width/2);
+}
+
+.row {
+    display: block;
+    .displayFlex();
+    flex-wrap: wrap;
+    width: 100%;
+    > div {
+        position: relative;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.twelfth {
+    width: 100%;
+    margin-left: 0!important;
+    margin-right: 0 !important;
+}
+
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+    float: left;
+    margin-left: 2.564102564102564%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+    width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+    width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+    width: 65.81196581196582%;
+}
+
+.one-fourth {
+    width: 23.076923076923077%;
+}
+
+.three-fourths {
+    width: 74.35897435897436%;
+}
+
+.one-sixth {
+    width: 14.52991452991453%;
+}
+
+.five-sixths {
+    width: 82.90598290598291%;
+}
+
+.first {
+    clear: both;
+    margin-left: 0;
+}
+
+
+
+
+.one-third-no-gutter {
+    .column(4, 0);
+}
+.one-third-min-gutter {
+    .column(4, 0.2%);
+}
+.box-center {
+    margin: 0 auto !important;
+}

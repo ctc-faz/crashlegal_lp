@@ -1,0 +1,392 @@
+html {
+    // Fix issues with ems in IE
+    font-size: 100%;
+
+    // Stop browser from zooming on device orientation change
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+
+    // uncomment to fix webkit font rendering on dark sites
+    // -webkit-font-smoothing: antialiased;
+}
+
+
+body {
+    .group(); 
+    font-family: @font-family; 
+    color: @font-color;
+    font-size: @font-size;
+    font-size: 1rem;  
+    line-height: @line-height;
+    background-color: @background-color;
+    background-image: -o-linear-gradient(0deg, #ecebeb 87.6667%, #a6a4a7 100%);
+    background-image: -ms-linear-gradient(0deg, #ecebeb 87.6667%, #a6a4a7 100%);
+    background-image: -moz-linear-gradient(0deg, #ecebeb 87.6667%, #a6a4a7 100%);
+    background-image: -webkit-linear-gradient(0deg, #ecebeb 87.6667%, #a6a4a7 100%);
+    background-image: linear-gradient(0deg, #ecebeb 87.6667%, #a6a4a7 100%);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: @color-link;
+
+    &:visited {
+        color: @color-link;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    &:focus {
+        // Outline while focused for keyboard users
+        outline: thin dotted;
+    }
+
+    &:hover, &:active {
+        // No outline if hovered or active while focused
+        outline: none;
+    }
+}
+
+img {
+    // Stop IE6-9, FF3 from placing border around img in links
+    border: 0;
+
+    // fix downsampled images in older IEs
+    -ms-interpolation-mode: bicubic;
+}
+
+hr {
+    border: 0;
+    // Add height and border below if necessary
+    display: none;
+}
+
+::selection {
+    text-shadow: none;
+    // customize selection colors
+    background: @color-link;
+    color: #fff;
+}
+
+::-moz-selection {
+    text-shadow: none;
+    // customize selection colors
+    background: @color-link;
+    color: #fff;
+}
+
+ul,
+ol {
+    list-style-position: inside;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: @font-stack-monotype;
+}
+
+code {
+    font-family: @font-stack-monotype;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img,
+embed,
+object,
+video {
+    max-width: 100%;
+}
+
+textarea {
+    // Stops users from breaking layout by horizontally expanding textareas in webkit
+    resize: vertical;
+}
+
+p {
+    line-height: @line-height; 
+    margin-bottom: .5em;
+    font-weight: 400;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: @line-height;  
+    margin-bottom: 1em;   
+    font-weight: bold;
+}
+h1 {
+    font-size: 3.000em;
+    line-height: 1.2em;
+    margin-bottom: 1.2em;
+    font-weight: 500;
+}
+h2 {
+    font-size: 2.750em;
+    a {
+        font-size: inherit;
+        color: @white;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+            opacity: 0.9;
+        }
+    }
+}
+h3 {
+    font-size: 2.400em;
+}
+h4 {
+    font-size: 2.000em;
+}
+h5 {
+    font-size: 1.750em;
+}
+h6 {
+    font-size: 1.300em;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+//
+// 2. PAGE STYLES
+//
+
+.wrapper {
+    .group();
+    max-width: 100%; // This is the maximum width for the entire site
+    margin: 0 auto;
+    position: relative;
+    #content {
+        padding: 3.500em 3.750em;
+        margin-top: 3.75em;
+    }
+    footer {
+        padding: 0 3.750em 3.5em;
+    }
+}
+
+
+input,
+select {
+  border: 0;
+
+  white-space: normal;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+    background-color: @theme-color;
+    color: @white !important;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: 3.6em;
+    line-height: 3.6em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 0.075em;
+    .appearance();
+    .transition(all, 0.2s, ease-in-out);
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    .opacity(0.9);
+    text-decoration: none;
+}
+input[type="submit"].icon,
+input[type="reset"].icon,
+input[type="button"].icon,
+button.icon,
+.button.icon {
+    padding-left: 1.35em;
+}
+
+input[type="submit"].icon:before,
+input[type="reset"].icon:before,
+input[type="button"].icon:before,
+button.icon:before,
+.button.icon:before {
+    margin-right: 0.5em;
+}
+
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+    display: block;
+    margin: 0 0 0.875em 0;
+    width: 100%;
+}
+
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+    font-size: 0.8em;
+}
+
+input[type="submit"].big,
+input[type="reset"].big,
+input[type="button"].big,
+button.big,
+.button.big {
+    font-size: 1.35em;
+}
+
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+    -moz-pointer-events: none;
+    -webkit-pointer-events: none;
+    -ms-pointer-events: none;
+    pointer-events: none;
+    opacity: 0.25;
+}
+.bg-white{
+    background-color: @white;
+}
+.button-follow {
+    background-color: #fff;
+    color: #030303 !important;
+    padding: 0 1.5em;
+    border-radius: 0;
+    text-transform: none;
+}
+.fly {
+    position: absolute;
+    bottom: -2em;
+    width: 86%;
+    left: 50%;
+    margin-left: -43%;
+}
+.space-bottom {
+    margin-bottom: 3.75em;
+}
+.min-space-bottom {
+    margin-bottom: 2em;
+}
+.normal-padding {
+    padding: 4em 0;
+}
+.min-padding,.min-paddding {
+    padding: 2em 0;
+}
+.clear, .clear-responsive {
+    clear: both;
+}
+.text-center {
+    text-align: center;
+}
+.box-default {
+    background-color: @theme-color;
+    color: @white;
+    h3 {
+        color: inherit;
+    }
+}
+.content-center {
+    .displayFlex();
+    .flex-center();
+}
+.float-bottom {
+    align-self: flex-end;
+    justify-content: right;
+    align-items: right;
+}
+.float-right {
+    float: right;
+}
+.bottom-float {
+    bottom: 2.400em;
+    right: 2.400em;
+    position: absolute;
+}
+.display-mobile {
+    display: none;
+}
+
+.border-right {
+    position: relative;
+}
+.border-right:after {
+    content: '';
+    position: absolute;
+    width: 0.1em;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #fff;
+}
+.text-opacity-4 {
+    opacity: 0.4;
+}
+.text-opacity-5 {
+    opacity: 0.5;
+}
+.text-opacity-6 {
+    opacity: 0.6;
+}
+.text-opacity-7 {
+    opacity: 0.7;
+}
+.text-opacity-8 {
+    opacity: 0.8;
+}
+.text-opacity-9 {
+    opacity: 0.9;
+}
+

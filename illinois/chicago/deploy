@@ -1,0 +1,2 @@
+#! /usr/bin/bash
+rsync -ravu --delete * boometer@192.254.189.126:/home1/boometer/crashlegal

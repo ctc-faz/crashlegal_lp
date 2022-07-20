@@ -1,0 +1,44 @@
+#banner {
+    background-color: #333333;
+    color: #ffffff;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+#banner>article {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    padding: 8em 4em 6.25em 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    cursor: default
+}
+
+#banner>article .box-action {
+    background: #f1f1f1;
+    padding: 2.5em 2.25em
+}
+
+#banner>article.full {
+    min-height: 70vh;
+    width: 100%
+}
